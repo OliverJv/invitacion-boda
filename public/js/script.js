@@ -50,12 +50,13 @@
 */
 
 var elem = document.querySelector(".grid-container");
-imagesLoaded(elem, () => {
-  var msnry = new Masonry(elem, {
-    // options
-    itemSelector: ".grid-items",
-    columnWidth: 160,
-    gutter: 20,
-    isFitWidth: true
-  });
+var msnry = new Masonry(elem, {
+  itemSelector: ".grid-items",
+  columnWidth: 160,
+  gutter: 20,
+  isFitWidth: true,
 });
+
+function PlayAudio() {
+  document.getElementById("musica").play();
+}

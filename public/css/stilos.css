@@ -8,7 +8,7 @@ body {
   background-color: #dddddd;
 }
 .encabezado__group {
-  background-image: url(img/6.webp);
+  background-image: url(/public/src/img/6.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 50px;
+ 
 }
 
 .encabezado__group h1 {
@@ -44,7 +44,7 @@ body {
 .section {
   background-color: #dddddd;
   padding: 1rem;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -53,16 +53,18 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .section__group > * {
-  margin-bottom: 20px;
+margin-block: 10px;
 }
+
 
 .section__text > * {
   margin-bottom: 10px;
 }
 
 .section--invitacion {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .section--invitacion > .section__group > .section__text > h1 {
@@ -212,13 +214,24 @@ select:invalid {
   color: gray;
 }
 
+.nosotros {
+  font-family: "Roboto", "sans-serif";
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  color: #3e3e3e;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 160px);
   gap: 20px;
   justify-content: center;
   justify-items: center;
-  margin: 0 auto;
+  margin: 0px auto 50px auto;
 }
 
 .grid-items {
@@ -231,4 +244,37 @@ select:invalid {
 
 .grid-items:hover {
   filter: opacity(0.9);
+}
+
+#cuenta {
+  display: flex;
+  justify-content: center;
+  margin-block: 30px 25px;
+}
+
+.simply-section {
+  color: #3e3e3e;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  padding: 0.4rem;
+  margin: 0 10px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.simply-amount {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.simply-word {
+  font-size: 0.5rem;
+  font-weight: 300;
 }
