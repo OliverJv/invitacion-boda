@@ -214,7 +214,7 @@ select:invalid {
 
 .grid-container {
   display: grid;
-   grid-template-columns: repeat(auto-fill, 160px);
+  grid-template-columns: repeat(auto-fill, 160px);
   gap: 20px;
   justify-content: center;
   justify-items: center;
