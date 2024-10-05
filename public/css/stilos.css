@@ -1,0 +1,230 @@
+body {
+  font-family: Helvetica;
+}
+
+.principal {
+  height: auto;
+  width: 100%;
+  background-color: #dddddd;
+}
+.encabezado__group {
+  background-image: url(img/6.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: flex-end;
+margin-bottom: 50px;
+}
+
+.encabezado__group h1 {
+  font-family: "Alex Brush", cursive;
+  text-transform: unset;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+
+}
+
+.encabezado h3 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.section {
+  background-color: #dddddd;
+  padding: 1rem;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.section__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section__group > * {
+  margin-bottom: 20px;
+}
+
+.section__text > * {
+  margin-bottom: 10px;
+}
+
+.section--invitacion {
+  margin-top: 50px;
+}
+
+.section--invitacion > .section__group > .section__text > h1 {
+  font-family: "Alex Brush", cursive;
+  text-transform: unset;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.section h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section__text > p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2rem;
+}
+
+.section__fecha > h3 {
+  font-family: "Roboro", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.section__boton > button {
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px 20px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: #a1927f;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section__boton button:hover {
+  background-color: #848484;
+  transform: scale(1.05);
+}
+
+.section--celebracion > h3 {
+  font-family: "Roboro", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.section--vestimenta h3 {
+  font-family: "Roboro", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.section--fotos {
+  background-color: #a1927f;
+  height: 400px;
+  justify-content: center;
+}
+
+.section--fotos > .section__group > .section__text > h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.section--fotos > .section__group > .section__text > p {
+  color: white;
+  margin-bottom: 20px;
+}
+.fotos__boton {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+}
+.fotos__boton > button {
+  border-radius: 5px;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+
+  padding: 0.7rem;
+  background-color: #a1927f;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fotos__boton button:hover {
+  background-color: #848484;
+  transform: scale(1.05);
+}
+
+.section__input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section__input > * {
+  font-family: "Roboro", sans-serif;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.section__input > input {
+  width: 92%;
+  padding: 0.7rem;
+}
+
+.section__input select {
+  width: 100%;
+  padding: 0.7rem;
+}
+
+.section__input textarea {
+  width: 300px;
+  height: 200px;
+  padding: 1rem;
+}
+select:invalid {
+  color: gray;
+}
+
+.grid-container {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.grid-items {
+  border-radius: 15px;
+  margin-block: 10px;
+  width: 40vh;
+}

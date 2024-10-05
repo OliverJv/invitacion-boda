@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stilos.css" />
+
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <title>Invitación Boda</title>
+  </head>
+  <header></header>
+  <body class="principal">
+    <section>
+      <div class="encabezado">
+        <div class="encabezado__group">
+          <h1>¡Nos Casamos!</h1>
+          <h3>Oliver & Olga</h3>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section section--invitacion">
+        <div class="section__group">
+          <div class="section__text">
+            <h1>Estás Invitado!</h1>
+            <p>Queremos que seas parte de este momento tan especial</p>
+          </div>
+          <div class="section__countdown">
+            <h3>Aquí va la cuenta regresiva</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section--ceremonia">
+        <div class="section__group">
+          <lord-icon
+            src="https://cdn.lordicon.com/aydxrkfl.json"
+            trigger="loop"
+            delay="2000"
+            stroke="light"
+            state="in-reveal"
+            colors="primary:#242424,secondary:#545454"
+            style="width: 80px; height: 80px"
+          >
+          </lord-icon>
+          <div class="section__text">
+            <h1>Ceremonia</h1>
+            <p>
+              Iglesia Santísima Virgen <br />
+              Te esperamos el
+            </p>
+          </div>
+          <div class="section__fecha">
+            <h3>08 | 12</h3>
+          </div>
+          <div class="section__boton">
+            <button value="">Ver Ubicación</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section--celebracion">
+        <div class="section__group">
+          <lord-icon
+            src="https://cdn.lordicon.com/hihfsmas.json"
+            trigger="loop"
+            delay="2000"
+            stroke="light"
+            state="in-reveal"
+            colors="primary:#121331,secondary:#848484"
+            style="width: 100px; height: 100px"
+          ></lord-icon>
+          <div class="section__text">
+            <h1>Celebración</h1>
+            <p>
+              Quinta San José <br />
+              La celebracion será el
+            </p>
+          </div>
+
+          <div class="section__fecha">
+            <h3>08 | 12</h3>
+          </div>
+
+          <div class="section__boton">
+            <button value="">Ver Ubicación</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section--vestimenta">
+        <div class="section__group">
+          <lord-icon
+            src="https://cdn.lordicon.com/ujfvauwl.json"
+            trigger="loop"
+            delay="2000"
+            stroke="light"
+            colors="primary:#242424,secondary:#848484"
+            style="width: 100px; height: 100px"
+          ></lord-icon>
+
+          <div class="section__text">
+            <h3>Codigo de Vestimenta</h3>
+            <p>Formal - No niños</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section section--fotos">
+        <div class="section__group">
+          <lord-icon
+            src="https://cdn.lordicon.com/wgdqrxxf.json"
+            trigger="loop"
+            delay="1500"
+            state="loop-videocam"
+            colors="primary:#ffffff"
+            style="width: 100px; height: 100px"
+          >
+          </lord-icon>
+
+          <div class="section__text">
+            <h1>Comparte Fotos</h1>
+            <p>Sube Fotos de la boda al Albúm</p>
+          </div>
+          <div class="fotos__boton">
+            <button>Subir foto</button>
+            <button>Ver fotos subidas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="photos" class="grid-container">
+        <img class="grid-items" src="css/img/10.webp" alt="" />
+        <img class="grid-items" src="css/img/1.webp" alt="" />
+        <img class="grid-items" src="css/img/4.webp" alt="" />
+        <img class="grid-items" src="css/img/2.webp" alt="" />
+        <img class="grid-items" src="css/img/6.webp" alt="" />
+        <img class="grid-items" src="css/img/7.webp" alt="" />
+        <img class="grid-items" src="css/img/5.webp" alt="" />
+        <img class="grid-items" src="css/img/8.webp" alt="" />
+        <img class="grid-items" src="css/img/3.webp" alt="" />
+        <img class="grid-items" src="css/img/9.webp" alt="" />
+      </div>
+    </section>
+
+    <section>
+      <div class="section section--asistencia">
+        <div class="section__group">
+          <div class="section__text">
+            <h1>Confirmar asistencia</h1>
+            <p>Por favor, confirmar asistencia</p>
+          </div>
+
+          <div class="section__input">
+            <input type="text" placeholder="Nombre y Apellido" />
+            <select required>
+              <option value="" disabled selected hidden>¿Asistirás?</option>
+              <option value="si">Sí</option>
+              <option value="no">No podre ir</option>
+            </select>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              placeholder="Escribe tu mensaje"
+              rows="2"
+              cols="10"
+            ></textarea>
+          </div>
+          <div class="section__boton">
+            <button>Enviar respuesta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="footer__group">
+          <div class="footer__text">
+            <h1>Te esperamos</h1>
+            <h3>Oliver y Olga</h3>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
+   <!-- Vinculando tu archivo JS -->
+  </body>
+</html>
