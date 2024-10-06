@@ -10,15 +10,13 @@
     href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
 
+
   <link rel="stylesheet" href="public/css/reset.css" />
   <link rel="stylesheet" href="public/css/stilos.css" />
 
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-
+   <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
   <script src="public/js/simplyCountdown.min.js"></script>
-
 
 
   <title>Invitación Boda</title>
@@ -182,27 +180,24 @@
 
 
 
-  <div class="section__boton">
-    <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize_button" onclick="handleAuthClick()">
-      Authorize
-    </button>
-    <button id="signout_button" onclick="handleSignoutClick()">
-      Sign Out
-    </button>
-    <pre id="content" style="white-space: pre-wrap"></pre>
-    <p>Sheets API Quickstart</p>
-  </div>
+  <p>Sheets API Quickstart</p>
 
+  <!--Add buttons to initiate auth sequence and sign out-->
+  <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+  <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
+  <pre id="content" style="white-space: pre-wrap;"></pre>
 
+  <!-- Otros scripts que necesitas -->
+  <script src="public/js/simplyCountdown.min.js"></script>
   <script src="public/js/script.js"></script>
   <script src="public/js/cuenta-regresiva.js"></script>
-  <script async defer src="https://apis.google.com/js/api.js" id="gapi"></script>
-  <script async defer src="https://accounts.google.com/gsi/client" id="gis"></script>
-  <script async defer src="controller/auth.js"></script>
-  <script async defer src="controller/sheets.js"></script>
-  
+
+   <!-- Scripts de Google -->
+   <script src="https://apis.google.com/js/api.js" async defer id="gap"></script>
+   <script src="https://accounts.google.com/gsi/client" async defer id="gis"></script>
+   <script src="controller/auth.js" async defer></script>
+ 
 </body>
 
 </html>

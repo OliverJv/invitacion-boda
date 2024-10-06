@@ -1,7 +1,7 @@
 {
   "name": "invitacion-olga-oliver",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "start": "node index.js",
     "test": "node index.js"
