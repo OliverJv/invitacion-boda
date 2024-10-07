@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="public/css/reset.css" />
   <link rel="stylesheet" href="public/css/stilos.css" />
 
-   <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
   <script src="public/js/simplyCountdown.min.js"></script>
 
@@ -142,7 +142,40 @@
     </div>
   </section>
 
-  <section>
+  <section >
+    <div class="section section--asistencia">
+        <div class="section__group" id="form-container">
+            <div class="section__text">
+                <h1>Confirmar asistencia</h1>
+                <p>Por favor, confirmar asistencia</p>
+            </div>
+
+            <div class="section__input">
+                <input type="text" placeholder="Nombre y Apellido" />
+                <select required>
+                    <option value="" disabled selected hidden>¿Asistirás?</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No podré ir</option>
+                </select>
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" rows="2" cols="10"></textarea>
+            </div>
+            <div class="section__boton">
+                <button onclick="addPerson()" style="font-size: 10px;
+    font-weight: 500; width: auto; background-color: white; border: 2px; border-color: rgb(30, 30, 30);">Añadir otra persona</button>
+            </div>
+        
+            <div class="section__boton">
+                <button id="submit-button">Enviar respuestas</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+  <!--  <section>
     <div class="section section--asistencia">
       <div class="section__group">
         <div class="section__text">
@@ -165,7 +198,7 @@
       </div>
     </div>
   </section>
-  <!--<footer>
+ <footer>
       <div class="footer">
         <div class="footer__group">
           <div class="footer__text">
@@ -193,11 +226,12 @@
   <script src="public/js/script.js"></script>
   <script src="public/js/cuenta-regresiva.js"></script>
 
-   <!-- Scripts de Google -->
-   <script src="https://apis.google.com/js/api.js" async defer id="gap"></script>
-   <script src="https://accounts.google.com/gsi/client" async defer id="gis"></script>
-   <script src="controller/auth.js" async defer></script>
- 
+  <!-- Scripts de Google -->
+  <script src="https://accounts.google.com/gsi/client" async defer id="gis"></script>
+  <script src="https://apis.google.com/js/api.js" async defer id="gap"></script>
+  <script src="public/js/auth.js" async defer></script>
+
+
 </body>
 
 </html>
