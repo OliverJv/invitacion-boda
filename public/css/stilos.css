@@ -1,11 +1,10 @@
 body {
-  font-family: Helvetica;
+  background-color: #fcffee;
 }
 
 .principal {
   height: auto;
   width: 100%;
-  background-color: #dddddd;
 }
 .encabezado__group {
   background-image: url(/public/src/img/6.webp);
@@ -18,36 +17,28 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
- 
+  border-radius: 0 0 30px 30px;
 }
 
 .encabezado__group h1 {
-  font-family: "Alex Brush", cursive;
-  text-transform: unset;
-  letter-spacing: normal;
+  font-family: "Corinthia", cursive;
   font-weight: 400;
   font-style: normal;
+
+  text-transform: unset;
+  letter-spacing: normal;
   font-size: 4rem;
   text-align: center;
   color: white;
 }
 
-.encabezado h3 {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
-
 .section {
-  background-color: #dddddd;
   padding: 1rem;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
 }
+
 .section__group {
   display: flex;
   flex-direction: column;
@@ -55,12 +46,18 @@ body {
 }
 
 .section__group > * {
-margin-block: 10px;
+  margin-block: 10px;
 }
 
+.section__text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
 
 .section__text > * {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .section--invitacion {
@@ -68,39 +65,164 @@ margin-block: 10px;
 }
 
 .section--invitacion > .section__group > .section__text > h1 {
-  font-family: "Alex Brush", cursive;
-  text-transform: unset;
-  letter-spacing: normal;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 3rem;
+  color: #363b35;
+
+  text-transform: unset;
+  letter-spacing: normal;
+  font-size: 42px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#cuenta {
+  display: flex;
+  justify-content: center;
+  margin-block: 30px 25px;
+}
+
+.simply-section {
+  color: #e2ffdc;
+  font-family: "Roboto", sans-serif;
+  background-color: #4f594c;
+  width: 50px;
+  height: 50px;
+  padding: 0.4rem;
+  margin: 0 5px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.section h1 {
+.simply-amount {
+  display: block;
   font-family: "Roboto", sans-serif;
-  font-weight: 1000;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.simply-word {
+  font-size: 0.5rem;
+  font-weight: 300;
+}
+
+.section--ceremonia {
+  width: 80%;
+  background-color: #4f594c;
+  margin-block: 0 50px;
+  margin-inline: auto;
+  border-radius: 30px;
+  height: 580px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section--ceremonia > .section__group > .section__text > p {
+  color: #e2ffdc;
+  text-transform: none;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+
+  text-align: center;
+font-size: 20px;
+}
+
+.cont__fecha {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+ 
+  
+}
+
+.cont__dia {
+
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.fecha {
+  display: block;
+  padding-inline: 20px;
+  border-color: #404b3b;
+  border-inline-width: 2px;
+  border-style: solid;
+  height: 95px;
+}
+
+.fecha > .mes, .anno{
+font-size: 24px;
+text-transform: uppercase;
+}
+
+.fecha > .dia{
+font-size: 48px;
+}
+
+.cont__hora {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.section__fecha.fiesta{
+  margin: 0px;
+}
+
+.fiesta > *{
+  margin-bottom: 10px;
+}
+
+.section__fecha {
+  margin-block: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.section__fecha > * {
+  color: #e2ffdc;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   font-style: normal;
-  font-size: 1.6rem;
+  text-align: center;
+}
+
+.section__fecha > h3 {
+  color: #e2ffdc;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.section h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 36px;
+  color: #e2ffdc;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .section__text > p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  margin-block: 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   font-style: normal;
+  color: #404b3b;
+
   text-align: center;
   text-transform: uppercase;
   line-height: 1.2rem;
-}
-
-.section__fecha > h3 {
-  font-family: "Roboro", sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: 5px;
 }
 
 .section__boton > button {
@@ -125,19 +247,66 @@ margin-block: 10px;
   transform: scale(1.05);
 }
 
-.section--celebracion > h3 {
-  font-family: "Roboro", sans-serif;
-  font-weight: 800;
-  font-size: 1.1rem;
+
+.section--vestimenta h1 {
+  color: #363B35;
   text-transform: uppercase;
 }
 
-.section--vestimenta h3 {
-  font-family: "Roboro", sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
-  text-transform: uppercase;
+.vestimenta{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 20px;
 }
+
+.vestimenta > .hombre__mujer{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vestimenta > .hombre__mujer > h2{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #363B35;
+}
+
+.vestimenta > .hombre__mujer > p{
+  font-size: 16px;
+  font-weight: normal;
+  color: #363B35;
+}
+
+.vertical-line {
+  border-left: 2px solid #404b3b;
+  height: 80px; /* Altura de la línea */
+  margin-left: 0px;
+}
+
+.vestimenta__colores{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  color: #363B35;
+}
+.vestimenta__colores > h2{
+ font-size: 24px;
+ text-transform: uppercase;
+ font-style: italic;
+ font-weight: 500;
+ margin-block: 30px 20px;
+
+}
+.vestimenta__colores > p{
+ font-size: 20px;
+ width: 70%;
+ color: #363B35;
+}
+
 
 .section--fotos {
   background-color: #94a18f;
@@ -245,37 +414,4 @@ select:invalid {
 
 .grid-items:hover {
   filter: opacity(0.9);
-}
-
-#cuenta {
-  display: flex;
-  justify-content: center;
-  margin-block: 30px 25px;
-}
-
-.simply-section {
-  color: #3e3e3e;
-  font-family: "Roboto", sans-serif;
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  padding: 0.4rem;
-  margin: 0 10px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.simply-amount {
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.simply-word {
-  font-size: 0.5rem;
-  font-weight: 300;
 }

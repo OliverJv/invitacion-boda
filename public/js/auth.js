@@ -20,8 +20,14 @@ let tokenClient;
 let gapiInited = false;
 let gisInited = false;
 
-document.getElementById("gap").addEventListener("load", gapiLoaded());
-document.getElementById("gis").addEventListener("load", gisLoaded());
+window.onload = function () {
+  // Inicializa las APIs de Google cuando la página se ha cargado completamente.
+  gapiLoaded();
+  gisLoaded();
+};
+
+//document.getElementById("gap").addEventListener("load", gapiLoaded());
+//document.getElementById("gis").addEventListener("load", gisLoaded());
 
 document.getElementById("authorize_button").style.visibility = "hidden";
 document.getElementById("signout_button").style.visibility = "hidden";
