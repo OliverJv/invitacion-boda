@@ -22,8 +22,8 @@ let gisInited = false;
 
 window.onload = function () {
   // Inicializa las APIs de Google cuando la página se ha cargado completamente.
-  gapiLoaded();
   gisLoaded();
+  gapiLoaded();
 };
 
 //document.getElementById("gap").addEventListener("load", gapiLoaded());

@@ -119,6 +119,7 @@ body {
   height: 580px;
   display: flex;
   justify-content: space-evenly;
+  max-width: 450px;
 }
 
 .section--ceremonia > .section__group > .section__text > p {
