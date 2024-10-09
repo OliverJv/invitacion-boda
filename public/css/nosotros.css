@@ -1,0 +1,33 @@
+@import url('variables.css');
+
+.nosotros{
+
+    border-top: 2px var(--color-bordes);
+    border-bottom: 2px var(--color-bordes);
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    margin: 0px auto 50px auto;
+  }
+  
+  .grid-items {
+    border-radius: 15px;
+    width: 160px;
+    margin-bottom: 20px;
+    cursor: zoom-in;
+    background-color: lightgray;
+  }
+  
+  .grid-items:hover {
+    filter: opacity(0.9);
+  }
+  

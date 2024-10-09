@@ -1,0 +1,42 @@
+@import url('variables.css');
+
+
+.section--vestimenta{
+    max-width: 450px;
+    width: 75%;
+
+}
+
+
+.vestimenta{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-block: 50px;
+
+}
+  
+  .vestimenta > .hombre__mujer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hombre__mujer > h3{
+    font-style: normal;
+  }
+    
+  .vertical-line {
+    border-left: 2px solid var(--color-bordes);
+    height: auto; /* Altura de la línea */
+    margin-left: 0px;
+  }
+  
+  .vestimenta__colores{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    color: #363B35;
+  }

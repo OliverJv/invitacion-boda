@@ -1,0 +1,27 @@
+@import url('variables.css');
+
+.encabezado__group {
+    background-image: url(/public/src/img/6.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0 0 30px 30px;
+  }
+  
+  .encabezado__group h1 {
+    font-family: "Corinthia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: unset;
+    letter-spacing: normal;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+  }
+  

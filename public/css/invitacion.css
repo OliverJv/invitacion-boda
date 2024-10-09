@@ -1,0 +1,11 @@
+@import url('variables.css');
+
+.section--invitacion {
+    margin-block: 20px 10px;
+  }
+  
+  .section--invitacion > .section__group > .section__text > h1 {
+   
+    text-align: center;
+    margin-block: 40px;
+  }

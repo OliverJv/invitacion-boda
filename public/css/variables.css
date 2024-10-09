@@ -1,0 +1,26 @@
+:root {
+    /* Variables de colores */
+    --color-principal: #363B35;
+    --color-secundario: #4F594C;
+    --color-contraste: #E2FFDC;
+
+    --color-h1: #363B35;
+    --color-h2: #4F594C;
+
+    --color-h1-contraste: #E2FFDC;
+    --color-p-contraste: #E2FFDC;
+
+    --color-bordes: #ABABAB;
+    --color-tarjetas: #4F594C;
+  
+    /* Variables de tipografía */
+    --font-h1-size: 40px;
+    --font-h1-family: 'Cormorant Garamond', serif;
+    --font-h1-weight: bold;
+  
+    --font-h2-size: 25px;
+    --font-h2-family: 'Cormorant Garamond', serif;
+    --font-h2-weight: 600;
+   
+  }
+  

@@ -1,0 +1,77 @@
+@import url("variables.css");
+
+.section--ceremonia {
+    color: var(--color-contraste);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+
+.section--ceremonia > .section__group > .section__text > p {
+  text-transform: none;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.cont__fecha {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+
+.fecha {
+  display: block;
+  padding-inline: 20px;
+  border-color: var(--color-contraste);
+  border-inline-width: 2px;
+  border-style: solid;
+  height: 95px;
+}
+
+.fecha > .mes,
+.anno {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.fecha > .dia {
+  font-size: 48px;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.section__fecha.fiesta {
+  margin: 0px;
+}
+
+
+.section__fecha {
+    margin-block: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.section__fecha > h3 {
+    color: var(--color-contraste);
+    font-style: italic;
+    margin-bottom: 20px;
+
+}
+
+.fiesta > *
+{
+    margin-bottom: 20px;
+}
+fiesta {
+    font-size: 46px;
+}

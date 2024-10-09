@@ -1,0 +1,121 @@
+@import url("variables.css");
+
+body {
+  background-color: #fcffee;
+}
+
+.principal {
+  height: auto;
+  width: 100%;
+}
+
+h1 {
+  color: var(--color-h1);
+  font-size: var(--font-h1-size);
+  font-family: var(--font-h1-family);
+  font-weight: var(--font-h1-weight);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  color: var(--color-h2);
+  font-size: var(--font-h2-size);
+  font-family: var(--font-h2-family);
+  font-weight: var(--font-h2-weight);
+  font-style: var(--font-h2-style);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+h3{
+    font-size: 20px;
+    text-align: center;
+}
+
+p{
+    color: var(--color-secundario);
+    font-size: 20px;
+    text-align: center;
+    font-family: var(--font-h2-family);
+    font-weight: var(--font-h2-weight);
+    line-height: normal;
+}
+
+
+p.contraste {
+    color: var(--color-p-contraste);
+    font-family: var(--font-h2-family);
+    font-weight: var(--font-h2-weight);
+}
+
+h1.contraste {
+    color: var(--color-h1-contraste);
+}
+
+.border {
+    border: 2px solid var(--color-bordes);
+}
+
+.card {
+    background-color: var(--color-tarjetas);
+    width: 80%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.section {
+    padding: 2rem 1rem;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 35px auto;
+}
+
+.section__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 20px;
+}
+
+.section__group > * {
+    margin-block: 10px;
+}
+
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+label{
+    color: var(--color-secundario);
+    font-size: 20px;
+    font-family: var(--font-h2-family);
+    font-weight: var(--font-h2-weight);
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select, option, textarea{
+    padding: 15px;
+    font-family: 'Cormorant Garamond';
+    color: white;
+    background-color: var(--color-principal);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    font-family: var(--font-h2-family);
+    font-weight: var(--font-h2-weight);
+}
+
+button{
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-h2-family);
+    font-weight: var(--font-h2-weight);
+}

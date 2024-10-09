@@ -17,6 +17,15 @@
 
   <link rel="stylesheet" href="public/css/reset.css" />
   <link rel="stylesheet" href="public/css/stilos.css" />
+  <link rel="stylesheet" href="public/css/variables.css">
+  <link rel="stylesheet" href="public/css/section-common.css">
+  <link rel="stylesheet" href="public/css/encabezado.css">
+  <link rel="stylesheet" href="public/css/invitacion.css">
+  <link rel="stylesheet" href="public/css/ceremonia.css">
+  <link rel="stylesheet" href="public/css/vestimenta.css">
+  <link rel="stylesheet" href="public/css/nosotros.css">
+  <link rel="stylesheet" href="public/css/regalo.css">
+  <link rel="stylesheet" href="public/css/asistencia.css">
 
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
@@ -26,7 +35,7 @@
 </head>
 <header></header>
 
-<body class="principal" onclick="PlayAudio()">
+<body class="principal">
   <section>
     <div class="encabezado">
       <div class="encabezado__group">
@@ -44,29 +53,31 @@
 
         <div class="section__text">
           <h1>¡Estás Invitado!</h1>
-          <p>Queremos que seas parte de este momento tan especial</p>
+          <p class="uppercase">Queremos que seas parte de este momento tan especial</p>
         </div>
         <div id="cuenta" class="section__countdown"></div>
       </div>
     </div>
 
-    <div class="section section--ceremonia">
-      <div class="section__group">
-        <lord-icon src="https://cdn.lordicon.com/xyboiuok.json" trigger="loop" delay="500" colors="primary:#e2ffdc"
+    <div class="section section--ceremonia card ">
+      <div class="section__group ">
+        <lord-icon src="https://cdn.lordicon.com/xyboiuok.json" trigger="loop" delay="1500" colors="primary:#e2ffdc"
           style="width: 54px; height: 54px">
         </lord-icon>
         <div class="section__text">
-          <h1>Ceremonia</h1>
 
-          <p>
-            Heredia, Barba,<br />
+          <h1 class="contraste">Ceremonia</h1>
+
+          <p class="contraste">
+            Heredia, San Rafael,<br />
             Finca de Eventos Los Higuerones
           </p>
         </div>
         <div class="section__fecha">
-          <h3>Te esperamos el:</h3>
+
+          <h3 class="uppercase">Te esperamos el:</h3>
           <div class="cont__fecha">
-            <div class="cont__dia">
+            <div class="cont">
               <h4>Domingo</h4>
             </div>
             <div class="fecha">
@@ -74,19 +85,19 @@
               <h4 class="dia">08</h4>
               <h4 class="anno">2024</h4>
             </div>
-            <div class="cont__hora">
+            <div class="cont">
               <h4>4:30 P.M.</h4>
             </div>
           </div>
 
         </div>
-        <div class="section__fecha fiesta">
-          <lord-icon src="https://cdn.lordicon.com/utpmnzxz.json" trigger="loop" delay="1500" colors="primary:#e2ffdc"
+        <div class="fiesta">
+          <lord-icon src="https://cdn.lordicon.com/utpmnzxz.json" trigger="loop" delay="2000" colors="primary:#e2ffdc"
             style="width: 54px; height: 54px">
           </lord-icon>
 
-          <h1>Fiesta</h1>
-          <p>Salón Principal</p>
+          <h1 class="contraste">Fiesta</h1>
+          <p class="uppercase contraste">Salón Principal</p>
         </div>
 
 
@@ -103,21 +114,21 @@
 
           <div class="vestimenta">
             <div class="hombre__mujer">
-              <h2>Hombres</h2>
+              <h2 class="uppercase">Hombres</h2>
               <p> Traje Formal </br>
                 Zapato Formal
               </p>
             </div>
             <div class="vertical-line"></div>
             <div class="hombre__mujer">
-              <h2>Mujeres</h2>
+              <h2 class="uppercase">Mujeres</h2>
               <p> Vestido Largo </br>
                 Tacones
               </p>
             </div>
           </div>
           <div class="vestimenta__colores">
-            <h2>Como usar los colores:</h2>
+            <h2 class="uppercase">Como usar los colores:</h2>
             <p>Únicamente permitido el color negro como color principal</p>
           </div>
         </div>
@@ -127,9 +138,10 @@
     </div>
   </section>
 
-  <section>
+  <section class="nosotros section">
+
     <div class="section__text">
-      <h1 class="nosotros">Nosotros</h1>
+      <h1>Nosotros</h1>
     </div>
 
     <div id="photos" class="grid-container">
@@ -145,53 +157,27 @@
       <img loading="lazy" class="grid-items" src="public/src/img/4.webp" alt="" width="160px" height="240px" />
     </div>
   </section>
-  <section>
 
-    <div class="section section--ceremonia">
+  <section class="regalo">
+
+    <div class="section card">
       <div class="section__group">
         <lord-icon src="https://cdn.lordicon.com/kezeezyg.json" trigger="loop" stroke="bold" state="loop-roll"
           colors="primary:#e2ffdc,secondary:#e2ffdc" style="width:64px;height:64px">
         </lord-icon>
         <div class="section__text">
-          <h1>Regalos</h1>
-          <p>
+          <h1 class="contraste">Regalos</h1>
+          <p class="contraste">
             Su presencia en nuestra boda es el mejor regalo que podemos recibir. Sin embargo, si desean hacernos un
             obsequio adicional, pueden hacerlo en efectivo o por transferencia.
           </p>
 
-          <div class="section__cuenta">
-            <h3>Número de cuenta:</h3>
-            <p>banco bac</br>
-              cr 2115 1225 8778 4215 1257</p>
-          </div>
         </div>
       </div>
 
   </section>
 
-
-
-  <section>
-    <div class="section section--fotos">
-      <div class="section__group">
-        <lord-icon src="https://cdn.lordicon.com/wgdqrxxf.json" trigger="loop" delay="1500" state="loop-videocam"
-          colors="primary:#ffffff" style="width: 100px; height: 100px">
-        </lord-icon>
-
-        <div class="section__text">
-          <h1>Comparte Fotos</h1>
-          <p>Sube Fotos de la boda al Albúm</p>
-        </div>
-        <div class="fotos__boton">
-          <button>Subir foto</button>
-          <button>Ver fotos subidas</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section>
+  <section class="asistencia">
     <div class="section section--asistencia">
       <div class="section__group" id="form-container">
         <div class="section__text">
@@ -200,29 +186,25 @@
         </div>
 
         <div class="section__input">
-          <input type="text" placeholder="Nombre y Apellido" />
-          <select required>
+          <label for="name">Nombre Completo</label>
+          <input id="name" type="text" placeholder="Nombre y Apellido" />
+          <label for="asis">¿Asistirás?</label>
+          <select id="asis" required>
             <option value="" disabled selected hidden>¿Asistirás?</option>
             <option value="si">Sí</option>
             <option value="no">No podré ir</option>
           </select>
+          <label for="mens">¿Quieres decirnos algo?</label>
           <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" rows="2" cols="10"></textarea>
         </div>
         <div class="section__boton">
-          <button onclick="addPerson()" style="
-                font-size: 10px;
-                font-weight: 500;
-                width: auto;
-                background-color: white;
-                border: 2px;
-                border-color: rgb(30, 30, 30);
-              ">
+          <button onclick="addPerson()">
             Añadir otra persona
           </button>
         </div>
 
         <div class="section__boton">
-          <button id="submit-button">Enviar respuestas</button>
+          <button  class="btn" id="submit-button">Enviar respuestas</button>
         </div>
       </div>
     </div>
@@ -271,7 +253,7 @@
   <pre id="content" style="white-space: pre-wrap"></pre>
 
   <!-- Otros scripts que necesitas -->
- 
+
   <script src="public/js/script.js"></script>
   <script src="public/js/cuenta-regresiva.js"></script>
 
