@@ -6,27 +6,60 @@ var msnry = new Masonry(elem, {
   isFitWidth: true,
 });
 
+
+
 function PlayAudio() {
   document.getElementById("musica").play();
 }
 
-// Función para detener la reproducción del audio y reiniciar el tiempo
-function stopAudio() {
-  const audio = document.getElementById('musica');
-  audio.pause();
-  audio.currentTime = 0; // Reiniciar la posición del audio al comienzo
+// Seleccionamos el audio o video que queremos controlar
+const mediaElement = document.getElementById('musica');  // O puede ser miVideo
+
+let fadeInterval;
+
+// Función para hacer el fade in (aumentar volumen)
+function fadeIn(mediaElement) {
+    let volume = 0;  // Inicia en 0
+    mediaElement.volume = volume;  // Aseguramos que el volumen esté en 0
+    mediaElement.play();  // Reproducimos el audio/video
+
+    fadeInterval = setInterval(() => {
+        if (volume < 1) {
+            volume += 0.05;  // Aumentamos el volumen gradualmente
+            mediaElement.volume = volume.toFixed(2);  // Ajustamos el volumen
+        } else {
+            clearInterval(fadeInterval);  // Detenemos el intervalo cuando el volumen llega a 1
+        }
+    }, 100);  // Cada 100ms aumentamos el volumen
 }
 
-// Escuchar el evento 'beforeunload' para detener la música cuando el usuario abandona la página
-window.addEventListener('beforeunload', function () {
-  stopAudio(); // Detiene la música antes de que el usuario abandone la página
-});
+// Función para hacer el fade out (disminuir volumen)
+function fadeOut(mediaElement) {
+    let volume = mediaElement.volume;  // Tomamos el volumen actual
+    fadeInterval = setInterval(() => {
+        if (volume > 0) {
+            volume -= 0.05;  // Disminuimos el volumen gradualmente
+            mediaElement.volume = volume.toFixed(2);  // Ajustamos el volumen
+        } else {
+            clearInterval(fadeInterval);  // Detenemos el intervalo cuando el volumen llega a 0
+            mediaElement.pause();  // Pausamos el audio/video cuando el volumen es 0
+           
+        }
+    }, 100);  // Cada 100ms disminuimos el volumen
+}
 
-// Alternativa: Usar 'pagehide' para hacer lo mismo en navegadores que soportan este evento
-window.addEventListener('pagehide', function () {
-  stopAudio();
+// Escuchamos los cambios en la visibilidad de la página
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        // Si la página está oculta, hacemos fade out
+        fadeOut(mediaElement);
+        console.log('El audio se ha pausado con fade out porque el usuario cambió de pestaña o minimizó la ventana');
+    } else {
+        // Si la página vuelve a estar visible, hacemos fade in
+        fadeIn(mediaElement);
+        console.log('El audio se está reproduciendo de nuevo con fade in');
+    }
 });
-
 
 async function listMajors() {
   let response;
@@ -57,7 +90,7 @@ async function listMajors() {
   document.getElementById("content").innerText = output;
 }
 
-function addPerson() {
+/*function addPerson() {
   // Obtiene el contenedor de formularios
   const container = document.getElementById("form-container");
 
@@ -66,12 +99,12 @@ function addPerson() {
   newForm.classList.add("section--asistencia", "section__input");
 
   newForm.innerHTML = `
-<label >Nombre Completo</label>
-<input type="text" placeholder="Nombre y Apellido" />
+    <label >Nombre Completo</label>
+    <input type="text" placeholder="Nombre y Apellido" />
  
-<label for="asis">¿Asistirás?</label>
-<select required>
-<option value="" disabled selected hidden>¿Asistirás?</option>
+    <label for="asis">¿Asistirás?</label>
+    <select required>
+    <option value="" disabled selected hidden>¿Asistirás?</option>
 <option value="si">Sí</option>
 <option value="no">No podré ir</option>
 </select>
@@ -87,7 +120,65 @@ function addPerson() {
     container.lastElementChild.previousElementSibling
   ); // Inserta antes del botón "Añadir otra persona"
 }
+*/
+function addPerson() {
+  // Crear un nuevo formulario para otra persona
+  const nuevoFormulario = document.createElement('div');
+  nuevoFormulario.classList.add('formulario-persona');
+  
+  nuevoFormulario.innerHTML = `
+      <div class="section__input">
+          <label for="nombre">Nombre Completo</label>
+          <input class="nombre" type="text" placeholder="Nombre y Apellido" required />
+          <label for="asistencia">¿Asistirás?</label>
+          <select class="asistencia" required>
+              <option value="" disabled selected hidden>¿Asistirás?</option>
+              <option value="Sí">Sí</option>
+              <option value="No puedo">No podré ir</option>
+          </select>
+          <label for="mensaje">¿Quieres decirnos algo?</label>
+          <textarea class="mensaje" placeholder="Escribe tu mensaje" rows="2" cols="10"></textarea>
+      </div>
+  `;
+  
+  document.getElementById('contenedor-formularios').appendChild(nuevoFormulario);
+}
 
+document.getElementById("submit-button").onclick = function () {
+  // Obtener todos los formularios
+  const formularios = document.querySelectorAll('.formulario-persona');
+  let textoCompleto = '';
+
+  formularios.forEach((formulario, index) => {
+      // Obtener los valores de cada formulario
+      const nombre = formulario.querySelector('.nombre').value;
+      const asistencia = formulario.querySelector('.asistencia').value;
+      const mensaje = formulario.querySelector('.mensaje').value;
+
+      // Construir el texto para cada persona
+      textoCompleto += `Persona ${index + 1}:\n`;
+      textoCompleto += `Nombre: ${nombre}\n`;
+      textoCompleto += `Asistirá: ${asistencia}\n`;
+      if (mensaje) {
+          textoCompleto += `Mensaje especial: ${mensaje}\n`;
+      }
+      textoCompleto += `\n`; // Separador entre personas
+  });
+
+  // Definir el número de teléfono de WhatsApp al que se enviará el mensaje
+  const telefono = '50671513239'; // Tu número de WhatsApp de Costa Rica
+
+  // Codificar el mensaje para que sea compatible con URL
+  const mensajeWhatsApp = encodeURIComponent(textoCompleto);
+
+  // Crear la URL de WhatsApp con el mensaje
+  const url = `https://wa.me/${telefono}?text=${mensajeWhatsApp}`;
+
+  // Redirigir a la URL para abrir WhatsApp
+  window.open(url);
+};
+
+/*
 // Lógica para enviar datos
 document.getElementById("submit-button").onclick = function () {
   const isSignedIn = gapi.client.getToken() !== null;
@@ -95,11 +186,44 @@ document.getElementById("submit-button").onclick = function () {
   if (!isSignedIn) {
     // Si no está autenticado, llama a la función de autenticación y luego envía los datos
     handleAuthClickAfterAuth();
+
+     // Obtener todos los formularios
+     const formularios = document.querySelectorAll('.formulario-persona');
+     let textoCompleto = '';
+ 
+     formularios.forEach((formulario, index) => {
+         // Obtener los valores de cada formulario
+         const nombre = formulario.querySelector('.nombre').value;
+         const asistencia = formulario.querySelector('.asistencia').value;
+         const mensaje = formulario.querySelector('.mensaje').value;
+ 
+         // Construir el texto para cada persona
+         textoCompleto += `Persona ${index + 1}:\n`;
+         textoCompleto += `Nombre: ${nombre}\n`;
+         textoCompleto += `Asistirá: ${asistencia}\n`;
+         if (mensaje) {
+             textoCompleto += `Mensaje especial: ${mensaje}\n`;
+         }
+         textoCompleto += `\n`; // Separador entre personas
+     });
+ 
+     // Definir el número de teléfono de WhatsApp al que se enviará el mensaje
+     const telefono = '50671513239'; // Cambia este número por tu número de WhatsApp
+ 
+     // Codificar el mensaje para que sea compatible con URL
+     const mensajeWhatsApp = encodeURIComponent(textoCompleto);
+ 
+     // Crear la URL de WhatsApp con el mensaje
+     const url = `https://wa.me/${telefono}?text=${mensajeWhatsApp}`;
+ 
+     // Redirigir a la URL para abrir WhatsApp
+     window.open(url);
   } else {
     // Si ya está autenticado, procede a enviar los datos directamente
     sendFormData();
   }
 };
+*/
 
 // Función para manejar la autenticación y luego enviar los datos
 function handleAuthClickAfterAuth() {

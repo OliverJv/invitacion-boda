@@ -176,39 +176,39 @@
       </div>
 
   </section>
-
   <section class="asistencia">
     <div class="section section--asistencia">
-      <div class="section__group" id="form-container">
-        <div class="section__text">
-          <h1>Confirmar asistencia</h1>
-          <p>Por favor, confirmar asistencia</p>
-        </div>
+        <div class="section__group" id="form-container">
+            <div class="section__text">
+                <h1>Confirmar asistencia</h1>
+                <p>Por favor, confirmar asistencia</p>
+            </div>
 
-        <div class="section__input">
-          <label for="name">Nombre Completo</label>
-          <input id="name" type="text" placeholder="Nombre y Apellido" />
-          <label for="asis">¿Asistirás?</label>
-          <select id="asis" required>
-            <option value="" disabled selected hidden>¿Asistirás?</option>
-            <option value="si">Sí</option>
-            <option value="no">No podré ir</option>
-          </select>
-          <label for="mens">¿Quieres decirnos algo?</label>
-          <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" rows="2" cols="10"></textarea>
-        </div>
-        <div class="section__boton">
-          <button onclick="addPerson()">
-            Añadir otra persona
-          </button>
-        </div>
+            <div id="contenedor-formularios">
+                <div class="formulario-persona">
+                    <div class="section__input">
+                        <label for="nombre">Nombre Completo</label>
+                        <input class="nombre" type="text" placeholder="Nombre y Apellido" required />
+                        <label for="asistencia">¿Asistirás?</label>
+                        <select class="asistencia" required>
+                            <option value="" disabled selected hidden>¿Asistirás?</option>
+                            <option value="Sí">Sí</option>
+                            <option value="No puedo">No podré ir</option>
+                        </select>
+                        <label for="mensaje">¿Quieres decirnos algo?</label>
+                        <textarea class="mensaje" placeholder="Escribe tu mensaje" rows="2" cols="10"></textarea>
+                    </div>
+                </div>
+            </div>
 
-        <div class="section__boton">
-          <button  class="btn" id="submit-button">Enviar respuestas</button>
+            <div class="section__boton">
+                <button type="button" onclick="addPerson()">Añadir otra persona</button>
+                <button type="submit" class="btn" id="submit-button">Enviar respuestas</button>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
 
   <!--  <section>
     <div class="section section--asistencia">
@@ -256,6 +256,7 @@
 
   <script src="public/js/script.js"></script>
   <script src="public/js/cuenta-regresiva.js"></script>
+  <script src="public/js/ws.js"></script>
 
   <!-- Scripts de Google -->
   <script src="https://apis.google.com/js/api.js" async defer id="gap"></script>
