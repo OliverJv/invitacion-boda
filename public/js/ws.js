@@ -29,4 +29,11 @@ function mensajeWhatsApp(){
   
   // Redirigir a la URL para abrir WhatsApp
   window.open(url);
+
+      // Llamar a la función para limpiar el formulario
+      clearForm();
+    
+      // Mostrar mensaje de éxito
+      alert("¡Confirmación enviada exitosamente!");
 }
+
