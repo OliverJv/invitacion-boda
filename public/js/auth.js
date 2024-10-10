@@ -24,7 +24,7 @@ window.onload = function () {
   // Inicializa las APIs de Google cuando la página se ha cargado completamente.
   gisLoaded();
   gapiLoaded();
-  //PlayAudio();
+  PlayAudio();
 };
 
 //document.getElementById("gap").addEventListener("load", gapiLoaded());

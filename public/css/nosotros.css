@@ -9,10 +9,29 @@
     justify-content: center;
     width: 85%;
   }
+
+  @media screen and (max-width: 391px) {
+    .nosotros {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border: none;
+
+    }
+    .nosotros > .section__text > h1{
+      margin-bottom: 40px;
+    }
+
+    .section.nosotros{
+padding: 0;
+    }
+  }
+
+
   
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 160px);
+    grid-template-columns: repeat(auto-fill, 144px);
     gap: 20px;
     justify-content: center;
     justify-items: center;
