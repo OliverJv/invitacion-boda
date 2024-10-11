@@ -24,7 +24,7 @@ window.onload = function () {
   // Inicializa las APIs de Google cuando la página se ha cargado completamente.
   gisLoaded();
   gapiLoaded();
-  PlayAudio();
+
 };
 
 //document.getElementById("gap").addEventListener("load", gapiLoaded());
@@ -71,26 +71,27 @@ function gisLoaded() {
 // Actualiza la interfaz de usuario según el estado de autenticación
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-      console.log('Usuario autenticado.');
+    console.log("Usuario autenticado.");
   } else {
-      console.log('Usuario no autenticado.');
+    console.log("Usuario no autenticado.");
   }
-}
-
-// Inicia el proceso de autenticación
-function handleAuthClick(event) {
-  gapi.auth2.getAuthInstance().signIn();
 }
 
 
 /**
  * Enables user interaction after all libraries are loaded.
- */
+*/
 function maybeEnableButtons() {
   if (gapiInited && gisInited) {
     document.getElementById("authorize_button").style.visibility = "visible";
   }
 }
+
+// Inicia el proceso de autenticación
+//function handleAuthClick(event) {
+ // gapi.auth2.getAuthInstance().signIn();
+//}
+
 
 /**
  * Sign in the user upon button click.
@@ -98,11 +99,14 @@ function maybeEnableButtons() {
 function handleAuthClick() {
   tokenClient.callback = async (resp) => {
     if (resp.error !== undefined) {
-      throw resp;
+      console.error("Error durante la autenticación:", resp.error);
+      return;
+    
     }
-    document.getElementById("signout_button").style.visibility = "visible";
-    document.getElementById("authorize_button").innerText = "Refresh";
-    await listMajors();
+    
+
+    updateSigninStatus(true);
+    await sendFormData(); // Envía los datos después de autenticarse
   };
 
   if (gapi.client.getToken() === null) {
@@ -142,3 +146,21 @@ function handleSignoutClick() {
   }
 }
 
+// Actualiza el estado de la interfaz de usuario
+function updateSigninStatus(isSignedIn) {
+  if (isSignedIn) {
+    console.log("Usuario autenticado.");
+    document.getElementById("signout_button").style.visibility = "visible"; // Muestra el botón de cerrar sesión
+    document.getElementById("authorize_button").style.visibility = "hidden"; // Oculta el botón de autorización
+  } else {
+    console.log("Usuario no autenticado.");
+    document.getElementById("signout_button").style.visibility = "hidden"; // Oculta el botón de cerrar sesión
+    document.getElementById("authorize_button").style.visibility = "visible"; // Muestra el botón de autorización
+  }
+}
+
+function isLoggedIn() {
+  const accessToken = localStorage.getItem("access_token");
+  const expiresAt = localStorage.getItem("expires_at");
+  return accessToken && Date.now() < expiresAt; // Verifica si el token está presente y no ha expirado
+}
