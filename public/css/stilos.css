@@ -16,13 +16,11 @@
 .simply-amount {
   height: 50px;
   width: 50px;
-  margin-bottom: 5px;
+  margin: 0 auto 5px auto;
   border-radius: 100%;
-  
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--color-contraste);
-  
   display: flex;
   justify-content: center;
   align-items: center;
