@@ -8,30 +8,32 @@
 }
 
 .simply-section {
-  color: #e2ffdc;
-  font-family: "Roboto", sans-serif;
-  background-color: #4f594c;
-  width: 50px;
-  height: 50px;
-  padding: 0.4rem;
-  margin: 0 5px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    padding: 0.4rem;
+    margin: 0 5px;
+    text-align: center;
 }
 
 .simply-amount {
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+  border-radius: 100%;
+  
+  font-size: 1.4rem;
   font-weight: 600;
+  color: var(--color-contraste);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-principal);
+
 }
 
 .simply-word {
-  font-size: 0.5rem;
+  font-size: 1rem;
   font-weight: 300;
+  color: var(--color-principal);
 }
 
 

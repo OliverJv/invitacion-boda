@@ -17,5 +17,8 @@
     "google-auth-library": "^9.14.1",
     "googleapis": "^144.0.0",
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
   }
 }

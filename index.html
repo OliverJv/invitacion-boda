@@ -43,7 +43,7 @@
   <section>
     <div class="encabezado">
       <div class="encabezado__group">
-        <h1>Olga & Oliver</h1>
+        <h1 class="slide-top">Olga & Oliver</h1>
       </div>
     </div>
   </section>
@@ -52,12 +52,13 @@
     <div class="section section--invitacion">
       <div class="section__group">
         <audio id="musica" controls>
-          <source src="public/src/audio/A Thousand Years Cover.mp3" type="audio/mpeg" />
+          <source src="public/img/Amarte_2.mp3" type="audio/mpeg" />
         </audio>
 
         <div class="section__text">
           <h1>¡Estás Invitado!</h1>
-          <p class="uppercase">Queremos que seas parte de este momento tan especial</p>
+          <p class="uppercase">Queremos que seas parte de este momento tan especial
+          </p>
         </div>
         <div id="cuenta" class="section__countdown"></div>
       </div>
@@ -100,8 +101,10 @@
             style="width: 54px; height: 54px">
           </lord-icon>
 
-          <h1 class="contraste">Fiesta</h1>
-          <p class="uppercase contraste">Salón Principal</p>
+          <h1 class="contraste animated-box">Fiesta</h1>
+          <p class="uppercase contraste">Salón Principal </br></br>
+            Por favor, note que esta será una celebración solo para adultos.
+          </p>
         </div>
 
 
@@ -133,7 +136,7 @@
           </div>
           <div class="vestimenta__colores">
             <h2 class="uppercase">Como usar los colores:</h2>
-            <p>Únicamente permitido el color negro como color principal</p>
+            <p>Únicamente permitido el color NEGRO</p>
           </div>
         </div>
 
@@ -149,16 +152,16 @@
     </div>
 
     <div id="photos" class="grid-container">
-      <img loading="lazy" class="grid-items" src="public/src/img/5.webp" alt="" width="160px" height="107px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/10.webp" alt="" width="160px" height="240px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/1.webp" alt="" width="160px" height="240px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/2.webp" alt="" width="160px" height="240px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/7.webp" alt="" width="160px" height="107px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/8.webp" alt="" width="160px" height="240px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/3.webp" alt="" width="160px" height="240px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/9.webp" alt="" width="160px" height="240px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/6.webp" alt="" width="160px" height="107px" />
-      <img loading="lazy" class="grid-items" src="public/src/img/4.webp" alt="" width="160px" height="240px" />
+      <img loading="lazy" class="grid-items" src="public/img/5.webp" alt="" width="160px" height="107px" />
+      <img loading="lazy" class="grid-items" src="public/img/10.webp" alt="" width="160px" height="240px" />
+      <img loading="lazy" class="grid-items" src="public/img/1.webp" alt="" width="160px" height="240px" />
+      <img loading="lazy" class="grid-items" src="public/img/2.webp" alt="" width="160px" height="240px" />
+      <img loading="lazy" class="grid-items" src="public/img/7.webp" alt="" width="160px" height="107px" />
+      <img loading="lazy" class="grid-items" src="public/img/8.webp" alt="" width="160px" height="240px" />
+      <img loading="lazy" class="grid-items" src="public/img/3.webp" alt="" width="160px" height="240px" />
+      <img loading="lazy" class="grid-items" src="public/img/9.webp" alt="" width="160px" height="240px" />
+      <img loading="lazy" class="grid-items" src="public/img/6.webp" alt="" width="160px" height="107px" />
+      <img loading="lazy" class="grid-items" src="public/img/4.webp" alt="" width="160px" height="240px" />
     </div>
   </section>
 
@@ -173,7 +176,7 @@
           <h1 class="contraste">Regalos</h1>
           <p class="contraste">
             Su presencia en nuestra boda es el mejor regalo que podemos recibir. Sin embargo, si desean hacernos un
-            obsequio adicional, pueden hacerlo en efectivo o por transferencia.
+            obsequio adicional, pueden hacerlo en efectivo.
           </p>
 
         </div>
@@ -183,57 +186,49 @@
 
   <section class="asistencia">
     <div class="section section--asistencia">
-        <div class="section__group" id="form-container">
-            <div class="section__text">
-                <h1>Confirmar asistencia</h1>
-                <p>Por favor, confirmar asistencia</p>
-            </div>
-
-            <div id="contenedor-formularios">
-                <div class="formulario-persona">
-                    <div class="section__input">
-                        <label for="nombre">Nombre Completo</label>
-                        <input class="nombre" type="text" placeholder="Nombre y Apellido" required />
-                        <label for="asistencia">¿Asistirás?</label>
-                        <select class="asistencia" required>
-                            <option value="" disabled selected hidden>¿Asistirás?</option>
-                            <option value="Sí">Sí</option>
-                            <option value="No puedo">No podré ir</option>
-                        </select>
-                        <label for="mensaje">¿Quieres decirnos algo?</label>
-                        <textarea class="mensaje" placeholder="Escribe tu mensaje" rows="2" cols="10"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section__boton">
-                <button type="button" onclick="addPerson()">Añadir otra persona</button>
-                <button type="submit" class="btn" id="submit-button">Enviar respuestas</button>
-            </div>
+      <div class="section__group" id="form-container">
+        <div class="section__text">
+          <h1>Confirmar asistencia</h1>
+          <p>Por favor, confirmar asistencia</p>
         </div>
+
+        <form id="confirmacion-form"> <!-- Cambié el contenedor a un <form> -->
+          <div id="contenedor-formularios">
+            <div class="formulario-persona">
+              <div class="section__input">
+                <label for="nombre">Nombre Completo</label>
+                <input class="nombre" type="text" placeholder="Nombre y Apellido" required />
+                <label for="asistencia">¿Asistirás?</label>
+                <select class="asistencia" required>
+                  <option value="" disabled selected hidden>¿Asistirás?</option>
+                  <option value="Sí">Sí</option>
+                  <option value="No puedo">No podré ir</option>
+                </select>
+                <label for="mensaje">¿Quieres decirnos algo?</label>
+                <textarea class="mensaje" placeholder="Escribe tu mensaje" rows="2" cols="10"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="section__boton">
+            <button type="button" onclick="addPerson()">Añadir otra persona</button>
+            <button type="submit" class="btn" id="submit-button">Enviar respuestas</button>
+          </div>
+
+      </div>
     </div>
-</section>
-
-
-  <p>Olga & Oliver</p>
-
-  <!--Add buttons to initiate auth sequence and sign out-->
-  <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-  <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
-
-  <pre id="content" style="white-space: pre-wrap"></pre>
+  </section>
+  <p class="footer">Olga & Oliver</p>
 
   <!-- Otros scripts que necesitas -->
 
+
+  <script src="public/js/cookieBot.js"></script>
   <script src="public/js/script.js"></script>
   <script src="public/js/cuenta-regresiva.js"></script>
-  <script src="public/js/ws.js"></script>
-  <script src="public/js/cookieBot.js"></script>
+  <!-- <script src="public/js/ws.js"></script> -->
 
-  <!-- Scripts de Google -->
-  <script src="https://apis.google.com/js/api.js" async defer id="gap"></script>
-  <script src="https://accounts.google.com/gsi/client" async defer id="gis"></script>
-  <script src="public/js/auth.js" async defer></script>
+
 </body>
 
 </html>
