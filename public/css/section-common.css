@@ -127,3 +127,19 @@ button{
     font-family: var(--font-h2-family);
     font-weight: var(--font-h2-weight);
 }
+
+
+.boton {
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--color-p-contraste);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-block: 10px;
+}
+
+.boton:hover {
+    background-color: #45a049; /* Color al pasar el mouse */
+}
