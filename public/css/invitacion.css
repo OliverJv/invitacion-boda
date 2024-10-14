@@ -2,6 +2,7 @@
 
 .section--invitacion {
     margin-block: 20px 10px;
+    padding: 50px;
   }
   
   .section--invitacion > .section__group > .section__text > h1 {

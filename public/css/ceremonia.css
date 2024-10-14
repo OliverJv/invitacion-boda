@@ -1,7 +1,7 @@
 @import url("variables.css");
 
 .section--ceremonia {
-    color: var(--color-contraste);
+    color: var(--color-principal);
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;
@@ -11,7 +11,6 @@
 
 .section--ceremonia > .section__group > .section__text > p {
   text-transform: none;
-  margin-bottom: 20px;
   font-size: 20px;
 }
 
@@ -26,7 +25,7 @@
 .fecha {
   display: block;
   padding-inline: 20px;
-  border-color: var(--color-contraste);
+  border-color: var(--color-secundario);
   border-inline-width: 2px;
   border-style: solid;
   height: 95px;
@@ -62,7 +61,7 @@
 }
 
 .section__fecha > h3 {
-    color: var(--color-contraste);
+    color: var(--color-principal);
     font-style: italic;
     margin-bottom: 20px;
 
@@ -72,6 +71,7 @@
 {
     margin-bottom: 20px;
 }
-fiesta {
+
+.fiesta {
     font-size: 46px;
 }

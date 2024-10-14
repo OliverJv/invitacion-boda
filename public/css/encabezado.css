@@ -1,17 +1,16 @@
 @import url('variables.css');
 
 .encabezado__group {
-  background-image: url(/public/img/Portada.webp);
+  background-image: url(/public/img/portada.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 97vh;
+  height: 100vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  
   }
 
 
