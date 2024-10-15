@@ -1,7 +1,7 @@
 @import url('variables.css');
 
 .encabezado__group {
-  background-image: url(../img/portada.webp);
+  background-image: url(/public/img/portada.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
