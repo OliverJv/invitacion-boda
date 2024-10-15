@@ -136,10 +136,17 @@ h1.contraste {
 }
 
  /* Media query para pantallas más pequeñas (tablets y móviles) */
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
   .flower-left,
   .flower-right {
     width: 12vw;
+  }
+  .bg-1{
+    background-size: 35vw;
+  }
+
+  .footer{
+    padding: 20px 20px;
   }
 }
 
