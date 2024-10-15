@@ -1,23 +1,22 @@
 @import url("variables.css");
 
 * {
-    box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el tamaño total */
+  box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el tamaño total */
 }
 
 body {
   background-color: #ffffff;
-  max-width: 600px;
+  max-width: 100%;
   margin: auto;
+  overflow-x: hidden;
 }
 
 .principal {
-    margin: auto;
-    height: auto;
-    max-width: 670px;
-    display: block;
-    flex-direction: column;
-
-
+  margin: auto;
+  height: auto;
+  max-width: 670px;
+  display: block;
+  flex-direction: column;
 }
 
 h1 {
@@ -40,120 +39,197 @@ h2 {
   margin-bottom: 20px;
 }
 
-
-h3{
-    font-size: 20px;
-    text-align: center;
+h3 {
+  font-size: 20px;
+  text-align: center;
 }
 
-p{
-    color: var(--color-secundario);
-    font-size: 20px;
-    text-align: center;
-    font-family: var(--font-h2-family);
-    font-weight: var(--font-h2-weight);
-    line-height: normal;
+p {
+  color: var(--color-secundario);
+  font-size: 20px;
+  text-align: center;
+  font-family: var(--font-h2-family);
+  font-weight: var(--font-h2-weight);
+  line-height: normal;
 }
-
 
 p.contraste {
-    color: var(--color-p-contraste);
-    font-family: var(--font-h2-family);
-    font-weight: var(--font-h2-weight);
+  color: var(--color-p-contraste);
+  font-family: var(--font-h2-family);
+  font-weight: var(--font-h2-weight);
 }
 
 h1.contraste {
-    color: var(--color-h1-contraste);
+  color: var(--color-h1-contraste);
 }
 
 .border {
-    border: 2px solid var(--color-bordes);
+  border: 2px solid var(--color-bordes);
 }
 
 .card {
-    /* background-color: var(--color-tarjetas); */
-    width: 80%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 30px;
-    text-align: center;
+  /* background-color: var(--color-tarjetas); */
+  width: 80%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 30px;
+  text-align: center;
 }
 
 .section {
-    display: contents;
+  display: contents;
+}
+
+.bg-1 {
+  background-repeat: no-repeat;
+  background-size: 53vw;
+  background-position: left top, right top;
+  background-image: url(../img/flor-encabezado.png), url(../img/flor-encabezado-2.png);
+}
+
+.container {
+  position: relative;
+}
+.flower-right {
+  background-image: url(../img/rec-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-40%);
+  position: absolute;
+  height: 50vw;
+  right: 0;
+}
+.flower-left {
+  background-image: url(../img/rec-12.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(10%);
+  position: absolute;
+  width: 100%;
+  height: 50vw;
+  left: 0;
+}
+
+.flower-2-right {
+  background-image: url(../img/der-flor\ 2.png);
+}
+
+.flower-2-left {
+  background-image: url(../img/izq-flor-2.png);
+}
+.flower-3-right {
+  background-image: url(../img/rec-1.png);
+  bottom: -290px;
+}
+
+.flower-3-left {
+  background-image: url(../img/izq-flor-3.png);
+  bottom: -150px;
+}
+
+.flower-4-right{
+    background-image: url(../img/izq-flor-4.png);
+}
+
+.flower-4-left{
+    background-image: url(../img/der-flor-4.png);
+}
+
+ /* Media query para pantallas más pequeñas (tablets y móviles) */
+  @media (max-width: 768px) {
+  .flower-left,
+  .flower-right {
+    width: 12vw;
+  }
+}
+
+/* Media query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .flower-left,
+  .flower-right {
+    width: 17vw;
+  }
 }
 
 .section__group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 50px;
+  max-width: 540px;
+  margin: auto;
 }
 
 .section__group > * {
-    margin-block: 10px;
+  margin-block: 10px;
 }
 
-
-.uppercase{
-    text-transform: uppercase;
+.uppercase {
+  text-transform: uppercase;
 }
 
-label{
-    color: var(--color-secundario);
-    font-size: 20px;
-    font-family: var(--font-h2-family);
-    font-weight: var(--font-h2-weight);
-    line-height: normal;
-    margin-bottom: 5px;
+label {
+  color: var(--color-secundario);
+  font-size: 20px;
+  font-family: var(--font-h2-family);
+  font-weight: var(--font-h2-weight);
+  line-height: normal;
+  margin-bottom: 5px;
 }
 
-input[type="text"], select, option, textarea{
-    padding: 15px;
-    font-family: 'Cormorant Garamond';
-    color: white;
-    background-color: var(--color-principal);
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 20px;
-    font-family: var(--font-h2-family);
-    font-weight: var(--font-h2-weight);
+input[type="text"],
+select,
+option,
+textarea {
+  padding: 15px;
+  font-family: "Cormorant Garamond";
+  color: white;
+  background-color: var(--color-principal);
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  font-family: var(--font-h2-family);
+  font-weight: var(--font-h2-weight);
+  font-size: 20px;
 }
 
-button{
-    color: white;
-    text-transform: uppercase;
-    font-family: var(--font-h2-family);
-    font-weight: var(--font-h2-weight);
+button {
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--font-h2-family);
+  font-weight: var(--font-h2-weight);
 }
-
 
 .boton {
-   
-border-radius: 5px;
-   
-padding: 10px 20px;
-   
-border: none;
-   
-background-color: var(--color-principal);
-   
-cursor: pointer;
-   
-transition: background-color 0.3s ease, transform 0.3s ease;
-   
-margin-block: 20px;
+  border-radius: 5px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  background-color: var(--color-principal);
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  margin-block: 20px;
 }
 
 .boton:hover {
-    background-color:var(--color-secundario); /* Color al pasar el mouse */
+  background-color: var(--color-secundario); /* Color al pasar el mouse */
 }
 
-a{
-    text-decoration: none;
-    font-family: 'Cormorant Garamond';
-    color: white;
-    text-transform: uppercase;
-    margin-block: 20px;
+a {
+  text-decoration: none;
+  font-family: "Cormorant Garamond";
+  color: white;
+  text-transform: uppercase;
+  margin-block: 20px;
+}
+
+
+.footer{
+    padding: 20px;
 }

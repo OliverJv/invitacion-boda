@@ -41,7 +41,7 @@
   }
   
   .section__input textarea {
-    width: 300px;
+    /* width: 300px; */
     height: 200px;
     resize: none;
   }

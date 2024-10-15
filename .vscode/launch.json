@@ -26,7 +26,7 @@
             }
         },
         {
-            "type": "vscode-edge-devtools.debug",
+            "type": "msedge",
             "name": "Open Edge DevTools",
             "request": "attach",
             "url": "file://c:\\Users\\olive\\OneDrive\\Escritorio\\invitacion-olga-oliver\\index.html",

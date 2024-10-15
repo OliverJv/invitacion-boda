@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "",
   "scripts": {
-    "start": "http-server ./public",
+    "start": "http-server",
     "test": "node index.html"
   },
   "keywords": [],
