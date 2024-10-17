@@ -75,3 +75,8 @@
 .fiesta {
     font-size: 46px;
 }
+
+#nota{
+  font-size: .4em;
+  padding-inline: 45px;
+}

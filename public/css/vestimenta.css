@@ -39,4 +39,10 @@
     flex-direction: column;
     align-items: center;
     color: #363B35;
+    padding-inline: 20px;
+  }
+
+  .vestimenta__colores > p{
+margin-bottom: 20px;
+
   }
